@@ -1,0 +1,1586 @@
+/* =========================================================
+   LUMÉ — FASHION WEBSITE
+   style.css
+   Digunakan untuk:
+   - index.html
+   - about.html
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #171717;
+    background: #f8f6f2;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    height: 82px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f8f6f2;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #a47b55;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #a47b55;
+}
+
+/* Active menu untuk about.html */
+.navbar nav a.active {
+    color: #a47b55;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 18px;
+}
+
+.nav-actions button {
+    border: none;
+    background: transparent;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.nav-actions button:hover {
+    color: #a47b55;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* =========================================================
+   GLOBAL TYPOGRAPHY
+========================================================= */
+
+.eyebrow {
+    color: #a47b55;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 22px;
+}
+
+h2 em,
+.hero h1 em {
+    color: #a47b55;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   HOME — HERO
+========================================================= */
+
+.hero {
+    min-height: 690px;
+
+    display: grid;
+    grid-template-columns: 48% 52%;
+}
+
+.hero-content {
+    padding: 100px 10% 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    max-width: 570px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(55px, 6vw, 88px);
+
+    font-weight: 500;
+
+    line-height: 0.98;
+
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    max-width: 440px;
+
+    color: #777;
+
+    font-size: 15px;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+    padding: 15px 26px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.btn-dark {
+    color: white;
+    background: #171717;
+}
+
+.btn-dark:hover {
+    background: #a47b55;
+}
+
+.btn-outline {
+    border: 1px solid #171717;
+}
+
+.btn-outline:hover {
+    color: white;
+    background: #171717;
+}
+
+
+/* =========================================================
+   HOME — HERO IMAGE
+========================================================= */
+
+.hero-image {
+    min-height: 690px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=85")
+        center / cover;
+}
+
+.image-label {
+    position: absolute;
+
+    right: 35px;
+    bottom: 35px;
+
+    padding: 15px 20px;
+
+    color: white;
+
+    display: flex;
+    gap: 20px;
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    backdrop-filter: blur(5px);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   HOME — CATEGORIES
+========================================================= */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.category {
+    padding: 35px 6%;
+
+    border-right: 1px solid #ddd;
+
+    transition: 0.3s ease;
+}
+
+.category:last-child {
+    border-right: none;
+}
+
+.category:hover {
+    background: #eeeae4;
+}
+
+.category span {
+    color: #a47b55;
+    font-size: 11px;
+}
+
+.category h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin: 5px 0;
+}
+
+.category a {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   HOME — COLLECTION
+========================================================= */
+
+.collection {
+    padding: 110px 6%;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: end;
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.section-heading > a {
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    border-bottom: 1px solid #171717;
+
+    padding-bottom: 5px;
+}
+
+.products {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.product-image {
+    height: 470px;
+
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+.image-1 {
+    background-image:
+        url("https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80");
+}
+
+.image-2 {
+    background-image:
+        url("https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80");
+}
+
+.image-3 {
+    background-image:
+        url("https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80");
+}
+
+.image-4 {
+    background-image:
+        url("https://images.unsplash.com/photo-1548624313-0396c75ce3b5?auto=format&fit=crop&w=700&q=80");
+}
+
+.product-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.08);
+
+    transition: 0.4s ease;
+}
+
+.product-card:hover .product-image::after {
+    background: rgba(0,0,0,0.18);
+}
+
+.badge {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 10px;
+
+    color: white;
+    background: #171717;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+.heart {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 13px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.9);
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.product-info {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: start;
+
+    padding: 17px 0;
+}
+
+.product-info h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+}
+
+.product-info p {
+    color: #888;
+
+    font-size: 11px;
+}
+
+.product-info strong {
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HOME — ABOUT PREVIEW
+========================================================= */
+
+.about {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+
+    background: #eae4dc;
+}
+
+.about-image {
+    background:
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85")
+        center / cover;
+}
+
+.about-content {
+    padding: 100px 12%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 4vw, 55px);
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.about-content > p:not(.eyebrow) {
+    max-width: 480px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+.text-link {
+    width: max-content;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    border-bottom: 1px solid #171717;
+
+    padding-bottom: 5px;
+}
+
+.text-link:hover {
+    color: #a47b55;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter {
+    padding: 110px 20px;
+
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+.newsletter > p:not(.eyebrow) {
+    color: #777;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    font-size: 14px;
+}
+
+.newsletter form {
+    max-width: 500px;
+
+    margin: 35px auto 0;
+
+    display: flex;
+
+    border-bottom: 1px solid #171717;
+}
+
+.newsletter input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 15px 0;
+
+    font-size: 13px;
+}
+
+.newsletter button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — HERO
+========================================================= */
+
+.about-hero {
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            rgba(234, 228, 220, 0.88),
+            rgba(248, 246, 242, 0.95)
+        );
+}
+
+.about-hero-content {
+    max-width: 850px;
+}
+
+.about-hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+}
+
+.about-hero h1 em {
+    color: #a47b55;
+
+    font-weight: 500;
+}
+
+.about-hero-content > p:not(.eyebrow) {
+    max-width: 620px;
+
+    margin: auto;
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — PHOTO
+========================================================= */
+
+.fashion-photo-section {
+    padding: 80px 6%;
+
+    background: #f8f6f2;
+}
+
+.fashion-photo {
+    width: 100%;
+
+    max-height: 700px;
+
+    overflow: hidden;
+}
+
+.fashion-photo img {
+    width: 100%;
+
+    height: 700px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    filter: saturate(0.9);
+
+    transition: transform 0.6s ease;
+}
+
+.fashion-photo:hover img {
+    transform: scale(1.02);
+}
+
+.photo-caption {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.photo-caption span {
+    color: #a47b55;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.photo-caption p {
+    color: #777;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — INTRODUCTION
+========================================================= */
+
+.fashion-introduction {
+    display: grid;
+
+    grid-template-columns: 20% 80%;
+
+    padding: 120px 10%;
+
+    background: #171717;
+
+    color: white;
+}
+
+.section-number {
+    color: #a47b55;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.fashion-text {
+    max-width: 850px;
+}
+
+.fashion-text h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin-bottom: 40px;
+}
+
+.fashion-text h2 em {
+    color: #c49b70;
+}
+
+.fashion-text > p:not(.eyebrow) {
+    max-width: 700px;
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — SELF EXPRESSION
+========================================================= */
+
+.expression-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    padding: 120px 10%;
+
+    background: #eae4dc;
+}
+
+.expression-content h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 5vw, 65px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    margin-bottom: 35px;
+}
+
+.expression-content h2 em {
+    color: #a47b55;
+}
+
+.expression-content > p:not(.eyebrow) {
+    max-width: 500px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — FASHION ITEMS
+========================================================= */
+
+.expression-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.fashion-item {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 25px;
+
+    padding: 30px 0;
+
+    border-top: 1px solid #c8c0b7;
+}
+
+.fashion-item:last-child {
+    border-bottom: 1px solid #c8c0b7;
+}
+
+.fashion-item > span {
+    color: #a47b55;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.fashion-item h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin-bottom: 8px;
+}
+
+.fashion-item p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — FASHION TODAY
+========================================================= */
+
+.fashion-today {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+}
+
+.today-image {
+    overflow: hidden;
+}
+
+.today-image img {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 650px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    filter: saturate(0.85);
+}
+
+.today-content {
+    padding: 100px 12%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.today-content h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(43px, 4vw, 60px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    margin-bottom: 30px;
+}
+
+.today-content h2 em {
+    color: #a47b55;
+}
+
+.today-content > p:not(.eyebrow) {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.fashion-button {
+    width: max-content;
+
+    margin-top: 20px;
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid #171717;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.fashion-button:hover {
+    color: #a47b55;
+
+    border-color: #a47b55;
+}
+
+
+/* =========================================================
+   ABOUT PAGE — QUOTE
+========================================================= */
+
+.fashion-quote {
+    padding: 130px 20px;
+
+    text-align: center;
+
+    background: #f8f6f2;
+}
+
+.quote-line {
+    width: 45px;
+
+    height: 2px;
+
+    margin: 0 auto 35px;
+
+    background: #a47b55;
+}
+
+.fashion-quote blockquote {
+    max-width: 850px;
+
+    margin: auto;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(32px, 4vw, 52px);
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+.fashion-quote > p {
+    margin-top: 30px;
+
+    color: #a47b55;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 70px 6%;
+
+    color: white;
+
+    background: #171717;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.footer-brand p {
+    color: #999;
+
+    font-size: 12px;
+
+    margin-top: 10px;
+}
+
+footer .logo {
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 100px;
+}
+
+.footer-links div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer-links h4 {
+    color: #a47b55;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #aaa;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    padding: 18px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #777;
+
+    background: #111;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Navbar */
+
+    .navbar nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        min-height: 550px;
+
+        padding: 80px 7%;
+    }
+
+    .hero-image {
+        min-height: 550px;
+    }
+
+
+    /* Products */
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-image {
+        height: 420px;
+    }
+
+
+    /* Home About */
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        min-height: 500px;
+    }
+
+    .about-content {
+        padding: 80px 8%;
+    }
+
+
+    /* About Introduction */
+
+    .fashion-introduction {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 90px 8%;
+    }
+
+
+    /* Expression */
+
+    .expression-section {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding: 90px 8%;
+    }
+
+
+    /* Fashion Today */
+
+    .fashion-today {
+        grid-template-columns: 1fr;
+    }
+
+    .today-image img {
+        min-height: 500px;
+
+        height: 500px;
+    }
+
+    .today-content {
+        padding: 80px 8%;
+    }
+
+
+    /* Footer */
+
+    footer {
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+    .footer-links {
+        gap: 60px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Navbar */
+
+    .navbar {
+        height: 70px;
+
+        padding: 0 5%;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+
+    /* Hero */
+
+    .hero-content {
+        min-height: 500px;
+
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .hero-image {
+        min-height: 500px;
+    }
+
+
+    /* Categories */
+
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    .category {
+        border-right: none;
+
+        border-bottom: 1px solid #ddd;
+    }
+
+    .category:last-child {
+        border-bottom: none;
+    }
+
+
+    /* Collection */
+
+    .collection {
+        padding: 80px 5%;
+    }
+
+    .section-heading {
+        align-items: start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 500px;
+    }
+
+
+    /* Newsletter */
+
+    .newsletter {
+        padding: 80px 20px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+
+        border-bottom: none;
+
+        gap: 10px;
+    }
+
+    .newsletter input {
+        border-bottom: 1px solid #171717;
+    }
+
+    .newsletter button {
+        padding: 12px;
+
+        background: #171717;
+
+        color: white;
+    }
+
+
+    /* About Hero */
+
+    .about-hero {
+        min-height: 500px;
+
+        padding: 60px 25px;
+    }
+
+    .about-hero h1 {
+        font-size: 50px;
+    }
+
+
+    /* About Photo */
+
+    .fashion-photo-section {
+        padding: 50px 5%;
+    }
+
+    .fashion-photo img {
+        height: 450px;
+    }
+
+    .photo-caption {
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .photo-caption p {
+        text-align: right;
+    }
+
+
+    /* About Introduction */
+
+    .fashion-introduction {
+        padding: 75px 7%;
+    }
+
+    .fashion-text h2 {
+        font-size: 43px;
+    }
+
+
+    /* Expression */
+
+    .expression-section {
+        padding: 75px 7%;
+    }
+
+    .expression-content h2 {
+        font-size: 43px;
+    }
+
+    .fashion-item {
+        grid-template-columns: 40px 1fr;
+
+        gap: 15px;
+    }
+
+
+    /* Fashion Today */
+
+    .fashion-today {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .today-image img {
+        height: 450px;
+
+        min-height: 450px;
+    }
+
+    .today-content {
+        padding: 70px 7%;
+    }
+
+
+    /* Quote */
+
+    .fashion-quote {
+        padding: 90px 25px;
+    }
+
+
+    /* Footer */
+
+    .footer-links {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px;
+    }
+
+    .copyright {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+}
+
+/* =========================================================
+   ABOUT PAGE — STRUKTUR ORGANISASI
+========================================================= */
+
+.organization-section {
+    padding: 110px 6%;
+    background: #eae4dc;
+}
+
+.organization-heading {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.organization-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.organization-heading h2 em {
+    color: #a47b55;
+    font-weight: 500;
+}
+
+.organization-heading > p:last-child {
+    max-width: 580px;
+    margin: 0 auto;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.organization-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.organization-card {
+    min-width: 0;
+}
+
+.organization-photo {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    background: #d8d0c6;
+}
+
+.organization-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.85);
+    transition: transform 0.5s ease;
+}
+
+.organization-card:hover .organization-photo img {
+    transform: scale(1.04);
+}
+
+.organization-number {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 8px 12px;
+    background: rgba(23, 23, 23, 0.75);
+}
+
+.organization-info {
+    padding: 20px 0 0;
+}
+
+.organization-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.organization-role {
+    color: #a47b55;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.organization-description {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .organization-section {
+        padding: 90px 7%;
+    }
+
+    .organization-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 20px;
+    }
+
+    .organization-photo {
+        height: 350px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .organization-section {
+        padding: 75px 6%;
+    }
+
+    .organization-heading {
+        margin-bottom: 40px;
+    }
+
+    .organization-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .organization-photo {
+        height: 420px;
+    }
+
+    .organization-info h3 {
+        font-size: 25px;
+    }
+}
